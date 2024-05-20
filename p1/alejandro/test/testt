@@ -1,0 +1,93 @@
+import unittest
+from aplicacion.kata import calcular_resultado
+
+class TestCalcularResultado(unittest.TestCase):
+    def test_todos_strikes(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertEqual(resultado, 300)
+
+    def test_todos_spares(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertEqual(resultado, 150)
+
+    def test_todos_abiertos(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 90)
+
+    def test_un_spare_ultima_ronda(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 110)
+
+    def test_un_strike_ultima_ronda(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 120)
+
+    def test_mixto_strikes_spares(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 210)
+
+    def test_tiros_bonificados(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 320)
+
+    def test_un_strike(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 290)
+
+    def test_un_spare(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 160)
+
+    def test_todo_ceros(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertEqual(resultado, 0)
+
+    def test_exceso_bolos(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 300)
+
+    def test_negativos(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 300)
+
+    def test_ultimo_spare_bonus_strike(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 290)
+
+    def test_ultimo_strike_bonus_spare(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 290)
+
+    def test_mixto_strikes_spares_bonus(self):
+        for _ in range(10):
+            resultado = calcular_resultado()
+            self.assertTrue(resultado >= 0)
+            self.assertTrue(resultado <= 320)
+
+if __name__ == '__main__':
+    unittest.main()

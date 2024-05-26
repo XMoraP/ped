@@ -12,4 +12,4 @@ class Servidor:
 			fecha = datetime.datetime.now().strftime("%d/%m/%Y")
 			return fecha
 		else:
-			return 'holis'
+			raise ValueError("ERROR")

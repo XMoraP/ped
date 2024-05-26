@@ -23,6 +23,8 @@ class Servidor:
 					socket_cliente.send(respuesta.encode('utf-8'))
 			except ConnectionResetError:
 				pass
+			except BrokenPipeError:
+				pass
 
 if __name__ == "__main__":
 	servidor = Servidor()

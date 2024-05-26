@@ -11,7 +11,7 @@ class Test(unittest.TestCase):
 	
 	def test_obtener_hora(self):
 		servidor = Servidor()
-		hora_actual = datetime.now().time().strftime("%d/%m/%Y")
+		hora_actual = datetime.now().time().strftime("%I:%M:%S %p")
 		resultado = servidor.obtenerHora()
 		self.assertEqual(resultado, hora_actual)
 

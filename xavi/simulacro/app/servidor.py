@@ -6,9 +6,10 @@ class Servidor:
 			hora = datetime.datetime.now().strftime("%H:%M:%S")
 			return hora
 		else:
-			return "Error"
+			raise ValueError("ERROR")
 	def get_fecha(self, mensaje):
 		if mensaje.decode('utf-8') == 'FECHA':
 			fecha = datetime.datetime.now().strftime("%d/%m/%Y")
 			return fecha
-
+		else:
+			return 'holis'

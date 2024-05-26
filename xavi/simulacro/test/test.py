@@ -19,6 +19,11 @@ class Test(unittest.TestCase):
 		mensaje = 'Mierda'
 		with self.assertRaises(ValueError):
 			servidor.get_hora(mensaje.encode('utf-8'))
+	def test_fecha_error(self):
+		servidor = Servidor()
+		mensaje = 'Mierda'
+		with self.assertRaises(ValueError):
+			servidor.get_fecha(mensaje.encode('utf-8'))
 
 if __name__ == '__main__':
 	unittest.main()

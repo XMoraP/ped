@@ -1,11 +1,14 @@
 import unittest
 from app.servidor import Servidor
+from datetime import datetime
 
 class Test(unittest.TestCase):
-	def test(self):
+	def test_obtener_fecha(self):
 		servidor = Servidor()
-		ok = servidor.prueba()
-		self.assertEqual(ok, 'ok')
+		fecha_actual = datetime.now().date().strftime("%d/%m/%Y")
+		resultado = servidor.obtenerFecha()
+		self.assertEqual(resultado, fecha_actual)
+		
 
 if __name__ == '__main__':
 	unittest.main()

@@ -9,12 +9,12 @@ class Servidor:
 	def iniciar_servidor(self):
 		socket_servidor = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 		socket_servidor.bind(('0.0.0.0', 8000))
-		datos, addr = socket_servidor.recvfrom(512)
-		if datos.decode('utf-8') == 'ok':	
-			while True:
+		
+		while True:
+			datos, addr = socket_servidor.recvfrom(512)
+			if datos.decode('utf-8') == 'ok':	
 				respuesta = self.get_fecha() + " " + self.get_hora()
 				socket_servidor.sendto(respuesta.encode('utf-8'), addr)
-				socket_servidor.close()
 
 if __name__ == "__main__":
 	servidor = Servidor()

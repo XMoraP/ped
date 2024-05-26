@@ -22,17 +22,13 @@ class Test(unittest.TestCase):
 		resultado = servidor.obtenerHora()
 		self.assertEqual(resultado, hora_actual)
 
-	def test_enviar_mensaje_fecha_cliente(self):
-		cliente = Cliente()
-		fecha = "FECHA"
-		resultado = cliente.pedirFecha()
-		self.assertEqual(fecha, resultado)
+	def test_verificar_mensaje_cliente(self):
+		servidor = Servidor()
+		mensaje = "FECHA"
+		resultado = servidor.verificarMensaje(mensaje)
+		self.assertTrue(resultado)
 
-	def test_enviar_mensaje_hora_cliente(self):
-		cliente = Cliente()
-		hora = "HORA"
-		resultado = cliente.pedirHora()
-		self.assertEqual(hora, resultado)
+	
 
 
 		

@@ -28,10 +28,5 @@ class Test(unittest.TestCase):
 		resultado = servidor.verificarMensaje(mensaje)
 		self.assertTrue(resultado)
 
-	
-
-
-		
-
 if __name__ == '__main__':
 	unittest.main()

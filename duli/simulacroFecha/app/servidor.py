@@ -40,7 +40,10 @@ class Servidor:
                             connection.send(self.obtenerHora().encode('utf-8'))
                     else:
                         error = "Petición inválida\n"
-                        connection.send(error.encode('utf-8'))
+                        try:
+                            connection.send(error.encode('utf-8'))
+                        except:
+                            pass
         except BrokenPipeError:
             pass
         except KeyboardInterrupt:

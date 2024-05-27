@@ -2,6 +2,10 @@
 
 Este manual describe los pasos necesarios para instalar y utilizar el sistema en un entorno Linux.
 
+# Puerto de escucha elegido
+
+Puerto TCP número 16082.
+
 ## Requisitos del Sistema
 
 Asegúrese de que su sistema cumpla con los siguientes requisitos antes de proceder:

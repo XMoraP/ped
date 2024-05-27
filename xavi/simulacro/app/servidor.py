@@ -9,7 +9,7 @@ class Servidor:
 			fecha = datetime.datetime.now().strftime("%d/%m/%Y")
 			return fecha
 		else:
-			return "Mensaje invalido"
+			return "ERROR"
 	def iniciar_servidor(self): 
 		socket_servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket_servidor.bind(('0.0.0.0', 16082))

@@ -6,6 +6,10 @@ Este manual proporciona instrucciones detalladas sobre cómo utilizar el program
 
 Este programa fue desarrollado y probado en un entorno Linux. Para ejecutarlo, necesitas tener instalado Python 3 y Make en tu sistema.
 
+### Puerto de escucha
+
+Puerto TCP número 16081.
+
 #### Instalación de Python y Make en Linux
 
 1. **Python 3**: Puedes instalar Python 3 en tu sistema Linux usando el gestor de paquetes de tu distribución. Por ejemplo, en sistemas basados en Debian (como Ubuntu), puedes usar el siguiente comando:
@@ -65,7 +69,7 @@ Una vez dentro del proyecto el Makefile proporciona varios comandos útiles para
     ```bash
     make cliente
     ```
-- Al ejecutar el cliente, se pedirá que introduzca la direccion del servidor y las peticiones (hora o fecha) de la siguiente manera:
+- Al ejecutar el cliente, se pedirá que introduzca la direccion del servidor () y las peticiones (hora o fecha) de la siguiente manera:
 
 ```bash
     Introduzca la dirección del servidor: localhost

@@ -12,7 +12,7 @@ Clonar el repositorio que contiene el código del programa Cliente-Servidor. Abr
 ```bash
 git clone http://git.eps.ceu.es/ped/ped8
 
-cd ped8/p5
+cd ped8/p5/app1
 ```
 
 #### Instrucciones de uso
@@ -21,15 +21,14 @@ Una vez dentro de la carpeta de proyecto el Makefile proporciona varios comandos
 
 Paso 1: Iniciar el Servidor
 
-- **make serv**: Para iniciar el servidor utilizando un socket UNIX, es necesario especificar la ruta del socket. Esto es importante para que el servidor sepa dónde escuchar las conexiones del cliente. Ejecuta el siguiente comando en una terminal:
+- **make serv**: Para iniciar el servidor y especificar el puerto en el que escuchará las conexiones del cliente, utiliza el siguiente comando en una terminal:
 
     ```bash
-    make serv path=/tmp/<socket_name>
+    make serv port=<puerto>
     ```
- 
-    - En este comando:
 
-    `path` = Es la ruta del socket UNIX (Ejemplo: path=/tmp/socket8)
+    `port`: Es el número de puerto en el que el servidor escuchará las conexiones del cliente (ejemplo: port=8080).
+
 
 Paso 2: Ejecutar el Cliente
 

@@ -1,0 +1,55 @@
+### Manual de Usuario
+
+Este manual proporciona instrucciones detalladas sobre cómo utilizar el programa Cliente-Servidor donde el servidor devuelve la hora y fecha al cliente.
+
+#### Requisitos del Sistema
+
+Este programa fue desarrollado y probado en un entorno Linux. Para ejecutarlo, necesitas tener instalado Python3 y Make en tu sistema.
+
+#### Clonación del Repositorio
+Clonar el repositorio que contiene el código del programa Cliente-Servidor. Abre una terminal y ejecuta el siguiente comando:
+
+```bash
+git clone http://git.eps.ceu.es/ped/ped8
+
+cd ped8/p5/app2
+```
+
+#### Instrucciones de uso
+
+Una vez dentro de la carpeta de proyecto el Makefile proporciona varios comandos útiles para ejecutar el programa Cliente-Servidor:
+
+#### Instrucciones de uso
+
+Una vez dentro de la carpeta de proyecto el Makefile proporciona varios comandos útiles para ejecutar el programa Cliente-Servidor:
+
+Paso 1: Iniciar el Servidor
+
+- **make serv**: Para iniciar el servidor y especificar el puerto en el que escuchará las conexiones del cliente, utiliza el siguiente comando en una terminal:
+
+    ```bash
+    make serv port=<puerto>
+    ```
+
+    `port`: Es el número de puerto en el que el servidor escuchará las conexiones del cliente (ejemplo: port=8080).
+
+
+Paso 2: Ejecutar el Cliente
+
+- **make cli**: Una vez que el servidor esté en funcionamiento, puedes ejecutar el cliente para que se conecte al servidor. Es importante que el cliente utilice la dirección IP y el puerto del servidor al que se conectará. Para ello, abre una segunda terminal y ejecuta el siguiente comando:
+
+    ```bash
+    make cli ip=<ip_address> port=<port>
+    ```
+
+    - En este comando:
+
+    `ip`: Es la dirección IP del servidor al que se conectará el cliente.
+
+    `port`: Es el número de puerto en el que el servidor está escuchando las conexiones del cliente.
+
+    ```bash
+    make cli ip=192.168.127.1 port=8080
+    ```
+
+Recuerda abrir una segunda terminal para ejecutar este comando, ya que el cliente necesita estar en ejecución en paralelo con el servidor para establecer la conexión.

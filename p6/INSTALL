@@ -1,1 +1,31 @@
-Manual de instalación, administración y configuración.
+#### Manual de instalación: Requisitos del Sistema
+
+Este programa fue desarrollado y probado en un entorno Linux. Para ejecutarlo, necesitas tener instalado Python 3 y Make en tu sistema.
+
+#### Instalación de Python y Make en Linux
+
+1. **Python 3**: Puedes instalar Python 3 en tu sistema Linux usando el gestor de paquetes de tu distribución. Por ejemplo, en sistemas basados en Debian (como Ubuntu), puedes usar el siguiente comando:
+
+    ```bash
+    sudo apt update
+    sudo apt install python3
+    ```
+
+    Verifica que Python 3 se haya instalado correctamente ejecutando:
+
+    ```bash
+    python3 --version
+    ```
+
+2. **Make**: Make es una herramienta de construcción que se utiliza para automatizar tareas comunes en el desarrollo de software. Puedes instalar Make en tu sistema Linux usando el gestor de paquetes de tu distribución. Por ejemplo, en sistemas basados en Debian:
+
+    ```bash
+    sudo apt update
+    sudo apt install make
+    ```
+
+    Verifica que Make se haya instalado correctamente ejecutando:
+
+    ```bash
+    make --version
+    ```

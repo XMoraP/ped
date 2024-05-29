@@ -12,7 +12,7 @@ Clonar el repositorio que contiene el código del programa Cliente-Servidor. Abr
 ```bash
 git clone http://git.eps.ceu.es/ped/ped8
 
-cd ped8/p4
+cd ped8/p5
 ```
 
 #### Instrucciones de uso

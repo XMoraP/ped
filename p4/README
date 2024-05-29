@@ -1,1 +1,45 @@
-Manual de usuario.
+### Manual de Usuario
+
+Este manual proporciona instrucciones detalladas sobre cómo utilizar el programa Cliente-Servidor, donde el cliente envía una ruta hacia un fichero, el servidor lee el fichero especificado como argumento, determina si es un archivo de texto o binario y trasnfiere su contenido al cliente.
+
+#### Requisitos del Sistema
+
+Este programa fue desarrollado y probado en un entorno Linux. Para ejecutarlo, necesitas tener instalado Python3 y Make en tu sistema.
+
+#### Clonación del Repositorio
+Clonar el repositorio que contiene el código del programa Cliente-Servidor. Abre una terminal y ejecuta el siguiente comando:
+
+```bash
+git clone http://git.eps.ceu.es/ped/ped8
+
+cd ped8/p4
+```
+
+#### Instrucciones de uso
+
+Una vez dentro de la carpeta de proyecto el Makefile proporciona varios comandos útiles para ejecutar el programa Cliente-Servidor:
+
+Paso 1: Iniciar el Servidor
+
+- **make servidor**: Para iniciar el servidor utilizando un socket UNIX, es necesario especificar la ruta del socket. Esto es importante para que el servidor sepa dónde escuchar las conexiones del cliente. Ejecuta el siguiente comando en una terminal:
+
+    ```bash
+    make serv path=/tmp/<socket_name>
+    ```
+ 
+    - En este comando:
+
+    `path` = Es la ruta del socket UNIX (Ejemplo: path=/tmp/socket8)
+
+Paso 2: Ejecutar el Cliente
+
+- **make cliente**: Una vez que el servidor esté en funcionamiento, puedes ejecutar el cliente para que se conecte al servidor. Es importante que el cliente use la misma ruta del socket que se especificó para el servidor. Para ello, abre una segunda terminal y ejecuta el siguiente comando:
+
+    ```bash
+    make cli file=<path_file> path=/tmp/<socket_name>
+    ```
+    - En este comando:
+
+    `file` = Es la ruta del fichero que se envia al servidor.
+    
+    `path` = Es la ruta del socket UNIX que debe coincidir con la ruta especificada al     iniciar el servidor.

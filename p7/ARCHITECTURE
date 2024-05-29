@@ -1,1 +1,100 @@
-Manual de arquitectura.
+# Manual de Arquitectura del Software: Programa de Chat
+
+## Introducción
+
+Este manual proporciona una descripción detallada de la arquitectura del software para nuestro programa de chat. Se abordan los componentes principales, su interacción y el flujo de datos dentro del sistema.
+
+## Visión General
+
+Nuestro programa de chat consta de dos partes principales: el servidor y el cliente. Estas partes se comunican entre sí a través de sockets para permitir la mensajería instantánea entre múltiples usuarios.
+
+## Componentes Principales
+
+### Servidor
+
+El servidor es responsable de gestionar las conexiones de los clientes, autenticar usuarios, almacenar y distribuir mensajes, y gestionar las operaciones de entrada/salida.
+
+1. **Socket de Escucha**:
+   - **Descripción**: El servidor crea un socket de escucha para aceptar conexiones entrantes de clientes.
+   - **Implementación en el código**:
+     ```python
+     # Método iniciar_socket_servidor
+     self.serv_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+     self.serv_socket.bind(('0.0.0.0', 8888))
+     self.serv_socket.listen(5)
+     ```
+
+2. **Gestor de Usuarios**:
+   - **Descripción**: El servidor gestiona la autenticación y registro de usuarios.
+   - **Implementación en el código**:
+     ```python
+     # Método auth
+     def auth(self):
+         # Autenticación y registro de usuarios
+     ```
+
+3. **Gestor de Mensajes**:
+   - **Descripción**: El servidor almacena y distribuye mensajes entre los clientes.
+   - **Implementación en el código**:
+     ```python
+     # Método run_server
+     def run_server(self):
+         # Almacenamiento y distribución de mensajes
+     ```
+
+4. **Hilo de Ejecución Principal**:
+   - **Descripción**: El servidor ejecuta un bucle principal para gestionar eventos de entrada/salida y la comunicación con los clientes.
+   - **Implementación en el código**:
+     ```python
+     # Método run_server
+     def run_server(self):
+         # Lógica principal del servidor
+     ```
+
+### Cliente
+
+El cliente es la interfaz a través de la cual los usuarios interactúan con el sistema de chat.
+
+1. **Socket de Conexión**:
+   - **Descripción**: El cliente crea un socket de conexión para conectarse al servidor.
+   - **Implementación en el código**:
+     ```python
+     # Creación del socket de conexión y conexión al servidor
+     cliente_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+     cliente_socket.connect(('localhost', 8888))
+     ```
+
+2. **Interfaz de Usuario (UI)**:
+   - **Descripción**: El cliente proporciona una interfaz de usuario para que los usuarios escriban y vean mensajes.
+   - **Implementación en el código**:
+     ```python
+     # Bucle principal del script del cliente
+     while True:
+         # Manejo de la interfaz de usuario
+     ```
+
+3. **Gestor de Entrada/Salida**:
+   - **Descripción**: El cliente gestiona la entrada del usuario y la visualización de mensajes.
+   - **Implementación en el código**:
+     ```python
+     # Bucle principal del script del cliente
+     while True:
+         # Manejo de la entrada del usuario y la visualización de mensajes
+     ```
+
+## Flujo de Datos
+
+El flujo de datos dentro del sistema de chat es el siguiente:
+
+1. Un cliente inicia una conexión con el servidor.
+2. El servidor autentica al cliente y lo registra en el sistema si es necesario.
+3. Los usuarios pueden enviar mensajes a través de su cliente.
+4. El cliente envía el mensaje al servidor.
+5. El servidor recibe el mensaje y lo distribuye a todos los clientes conectados.
+6. Los clientes reciben y muestran el mensaje en su interfaz de usuario.
+
+## Conclusiones
+
+Este manual ha proporcionado una visión detallada de la arquitectura del software para nuestro programa de chat, describiendo cómo se implementan los componentes principales y el flujo de datos dentro del sistema.
+
+

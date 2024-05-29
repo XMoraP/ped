@@ -1,1 +1,35 @@
-Manual de usuario.
+### Manual de Usuario
+
+Este manual proporciona instrucciones detalladas sobre cómo utilizar el programa Cliente-Servidor donde el servidor devuelve la hora y fecha al cliente.
+
+#### Requisitos del Sistema
+
+Este programa fue desarrollado y probado en un entorno Linux. Para ejecutarlo, necesitas tener instalado Python3 y Make en tu sistema.
+
+#### Clonación del Repositorio
+Clonar el repositorio que contiene el código del programa Cliente-Servidor. Abre una terminal y ejecuta el siguiente comando:
+
+```bash
+git clone http://git.eps.ceu.es/ped/ped8
+
+cd ped8/p3
+```
+
+#### Instrucciones de uso
+
+Una vez dentro de la carpeta de proyecto el Makefile proporciona varios comandos útiles para ejecutar el programa Cliente-Servidor:
+
+Paso 1: Iniciar el Servidor
+
+- **make servidor**: El servidor debe estar en funcionamiento antes de que el cliente pueda conectarse a él. Para iniciar el servidor, ejecuta el siguiente comando en una terminal:
+
+    ```bash
+    make serv
+    ```
+Paso 2: Ejecutar el Cliente
+
+- **make cliente**: Una vez que el servidor esté en funcionamiento, puedes ejecutar el cliente para que se conecte al servidor. Para ello, abre una segunda terminal y ejecuta el siguiente comando:
+
+    ```bash
+    make cli
+    ```

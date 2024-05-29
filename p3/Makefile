@@ -1,8 +1,6 @@
-file = $@ 
-
-cliente:
+cli:
 	@python3 cli3.py 
-servidor: 
+serv: 
 	@python3 serv3.py
 %:
 	@echo "La regla '$@' no está definida en el Makefile."

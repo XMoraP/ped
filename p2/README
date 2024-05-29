@@ -1,1 +1,26 @@
-Manual de usuario.
+### Manual de Usuario
+
+Este manual proporciona instrucciones detalladas sobre cómo utilizar el programa Cliente-Servidor que lee un archivo especificado como argumento, determina si es un archivo de texto o binario y lo transfiere.
+
+#### Requisitos del Sistema
+
+Este programa fue desarrollado y probado en un entorno Linux. Para ejecutarlo, necesitas tener instalado Python3 y Make en tu sistema.
+
+#### Clonación del Repositorio
+Clonar el repositorio que contiene el código del programa Cliente-Servidor. Abre una terminal y ejecuta el siguiente comando:
+
+```bash
+git clone http://git.eps.ceu.es/ped/ped8
+
+cd ped8/p2
+```
+
+#### Instrucciones de uso
+
+Una vez dentro de la carpeta de proyecto el Makefile proporciona varios comandos útiles para ejecutar el programa Cliente-Servidor:
+
+- **make run**: Este comando inicia el programa, debe colocar la ruta del archivo que desea transferir escrbiendo file=/ruta. Por ejemplo:
+
+    ```bash
+    make run file=/ruta/archivo
+    ```

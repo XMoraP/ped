@@ -1,6 +1,6 @@
 ### Manual de Usuario
 
-Este manual proporciona instrucciones detalladas sobre cómo utilizar el programa Cliente-Servidor, donde el cliente envía una ruta hacia un fichero, el servidor lee el fichero especificado como argumento, determina si es un archivo de texto o binario y trasnfiere su contenido al cliente.
+Este manual proporciona instrucciones detalladas sobre cómo utilizar el programa Cliente-Servidor, donde el cliente envía una ruta hacia un fichero, el servidor lee el fichero especificado como argumento, determina si es un archivo de texto o binario y transfiere su contenido al cliente.
 
 #### Requisitos del Sistema
 

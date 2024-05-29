@@ -21,14 +21,14 @@ Una vez dentro de la carpeta de proyecto el Makefile proporciona varios comandos
 
 Paso 1: Iniciar el Servidor
 
-- **make servidor**: El servidor debe estar en funcionamiento antes de que el cliente pueda conectarse a él. Para iniciar el servidor, ejecuta el siguiente comando en una terminal:
+- **make serv**: El servidor debe estar en funcionamiento antes de que el cliente pueda conectarse a él. Para iniciar el servidor, ejecuta el siguiente comando en una terminal:
 
     ```bash
     make serv
     ```
 Paso 2: Ejecutar el Cliente
 
-- **make cliente**: Una vez que el servidor esté en funcionamiento, puedes ejecutar el cliente para que se conecte al servidor. Para ello, abre una segunda terminal y ejecuta el siguiente comando:
+- **make cli**: Una vez que el servidor esté en funcionamiento, puedes ejecutar el cliente para que se conecte al servidor. Para ello, abre una segunda terminal y ejecuta el siguiente comando:
 
     ```bash
     make cli

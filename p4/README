@@ -1,6 +1,6 @@
 ### Manual de Usuario
 
-Este manual proporciona instrucciones detalladas sobre cómo utilizar el programa Cliente-Servidor, donde el cliente envía una ruta hacia un fichero, el servidor lee el fichero especificado como argumento, determina si es un archivo de texto o binario y trasnfiere su contenido al cliente.
+Este manual proporciona instrucciones detalladas sobre cómo utilizar el programa Cliente-Servidor, donde el cliente envía una ruta hacia un fichero, el servidor lee el fichero especificado como argumento, determina si es un archivo de texto o binario y transfiere su contenido al cliente.
 
 #### Requisitos del Sistema
 
@@ -42,4 +42,4 @@ Paso 2: Ejecutar el Cliente
 
     `file` = Es la ruta del fichero que se envia al servidor.
     
-    `path` = Es la ruta del socket UNIX que debe coincidir con la ruta especificada al     iniciar el servidor.
+    `path` = Es la ruta del socket UNIX que debe coincidir con la ruta especificada al iniciar el servidor.
